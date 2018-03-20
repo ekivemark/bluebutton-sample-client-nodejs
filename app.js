@@ -10,7 +10,7 @@ const argv = require('yargs')
 	.option('tunnel', {
 		alias: 't',
 		// default: 'http://localhost',
-		default: 'http://http://52.90.238.222',
+		default: 'http://52.90.238.222',
 		describe: 'provide a secure tunnel for the app',
 	})
 	.option('port', {
