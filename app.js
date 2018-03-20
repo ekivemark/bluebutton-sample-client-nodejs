@@ -56,14 +56,15 @@ app.locals.ep = {
 };
 
 // application variables
-const appUrl = argv.tunnel;
-const appPort = argv.port;
-var appUri = appUrl + ':' + appPort;
+// const appUrl = argv.tunnel;
+// const appPort = argv.port;
+// var appUri = appUrl + ':' + appPort;
 // if redirecting through a tunnel(i.e. ngrok) then reconfigure the app Uri, sans port
-if(appUrl !== 'http://localhost') {
-	appUri = appUrl;
-}
-const appRedirectUri = appUri + '/redirect';
+//if(appUrl !== 'http://localhost') {
+//	appUri = appUrl;
+// }
+// const appRedirectUri = appUri + '/redirect';
+const appRedirectUri = 'http://52.90.238.222' + ':' + '8001'
 
 // Initialize the OAuth2 Library
 const oauth2 = require('simple-oauth2').create(serverAuth.credentials);
