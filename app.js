@@ -72,6 +72,7 @@ const appRedirectUri = appUri + '/redirect';
 const oauth2 = require('simple-oauth2').create(serverAuth.credentials);
 
 // Authorization oauth2 URI
+logger.info('calling with ' + appRedirectUri + ' and state=<state>')
 const authorizationUri = oauth2.authorizationCode.authorizeURL({
     redirect_uri: appRedirectUri,
     state: '<state>'
