@@ -66,7 +66,7 @@ var appUri = appUrl + ':' + appPort;
 //	appUri = appUrl;
 // }
 // const appRedirectUri = appUri + '/redirect';
-const appRedirectUri = appUrl + ':' + 'appPort' + '/redirect';
+const appRedirectUri = appUri + '/redirect';
 
 // Initialize the OAuth2 Library
 const oauth2 = require('simple-oauth2').create(serverAuth.credentials);
