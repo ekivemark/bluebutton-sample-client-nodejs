@@ -10,7 +10,7 @@ const argv = require('yargs')
 	.option('tunnel', {
 		alias: 't',
 		// default: 'http://localhost',
-		default: 'http://consumer.bluebutton.cms.fhirservice.net',
+		default: 'http://localhost',
 		describe: 'provide a secure tunnel for the app',
 	})
 	.option('port', {
@@ -56,10 +56,10 @@ app.locals.ep = {
 };
 
 // application variables
-// const appUrl = argv.tunnel;
-// const appPort = argv.port;
-const appUrl = 'http://consumer.bluebutton.cms.fhirservice.net';
-const appPort = '8001';
+const appUrl = argv.tunnel;
+const appPort = argv.port;
+// const appUrl = 'http://consumer.bluebutton.cms.fhirservice.net';
+// const appPort = '8001';
 var appUri = appUrl + ':' + appPort;
 // if redirecting through a tunnel(i.e. ngrok) then reconfigure the app Uri, sans port
 //if(appUrl !== 'http://localhost') {
