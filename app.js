@@ -60,12 +60,11 @@ const appUrl = argv.tunnel;
 const appPort = argv.port;
 // const appUrl = 'http://consumer.bluebutton.cms.fhirservice.net';
 // const appPort = '8001';
-var appUri = appUrl + ':' + appPort;
+// var appUri = appUrl + ':' + appPort;
 // if redirecting through a tunnel(i.e. ngrok) then reconfigure the app Uri, sans port
-//if(appUrl !== 'http://localhost') {
-//	appUri = appUrl;
-// }
-// const appRedirectUri = appUri + '/redirect';
+if(appUrl !== 'http://localhost') {
+	appUri = appUrl;
+}
 const appRedirectUri = appUri + '/redirect';
 
 // Initialize the OAuth2 Library
