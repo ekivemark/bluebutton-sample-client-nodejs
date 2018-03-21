@@ -330,4 +330,4 @@ app.get(app.locals.ep.fetch, hasToken, (req,res) => {
 // start the application listening
 app.listen(appPort, () => logger.info('The ' + app.locals.siteName + ' has been successfully started!\nVisit ' + appUri + ' in your favorite browser to try it out...'));
 
-logger.info('The redirect url will be:' + req.protocol + '://' + req.get('host'))
+logger.info('The redirect url will be:' + req.protocol + '://' + req.get('host'));
